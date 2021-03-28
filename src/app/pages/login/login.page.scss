@@ -1,0 +1,19 @@
+ion-content {
+
+    ion-row {
+        display: flex;
+        justify-content: center;
+
+        margin: 0 10px;
+
+        ion-col {
+            img {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+                align-self: center;
+                display: block;
+            }
+        }
+    }
+}
