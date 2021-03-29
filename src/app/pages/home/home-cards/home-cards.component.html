@@ -1,0 +1,17 @@
+<ion-card [class]="colorClass + '-card'" mode="ios">
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size=7>
+          <div>
+            <ion-text mode="ios" [class]="colorClass">{{ title }}</ion-text>
+            <ion-text mode="ios" [class]="colorClass">{{ value }}</ion-text>
+          </div>
+        </ion-col>
+        <ion-col class="icon" size="5">
+          <ion-icon [class]="colorClass" [name]="icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

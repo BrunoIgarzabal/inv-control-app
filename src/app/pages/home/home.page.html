@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Home
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <app-home-cards
+    title="Total de vendas"
+    value="R$30.000,00"
+    icon="cart"
+    colorClass="success"
+  ></app-home-cards>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <app-home-cards
+    title="Total de serviços"
+    value="R$12.543,00"
+    icon="hammer"
+    colorClass="primary"
+  ></app-home-cards>
+
+  <app-home-cards
+    title="Total a pagar"
+    value="R$2.231,00"
+    icon="wallet"
+    colorClass="danger"
+  ></app-home-cards>
+
+  <app-home-cards
+    title="Total a receber"
+    value="R$1.231,00"
+    icon="cash"
+    colorClass="warning"
+  ></app-home-cards>
 </ion-content>

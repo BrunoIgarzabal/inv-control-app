@@ -1,0 +1,94 @@
+.primary-card {
+    border-left: 5px solid var(--ion-color-primary);
+}
+
+.success-card {
+    border-left: 5px solid var(--ion-color-success-shade);
+}
+
+.warning-card {
+    border-left: 5px solid var(--ion-color-warning-shade);
+}
+
+.danger-card {
+    border-left: 5px solid var(--ion-color-danger);
+}
+
+ion-card {
+    --background: #fff;
+
+    margin-left: 15px;
+    margin-right: 15px;
+
+    height: 120px;
+
+    max-width: 340px;
+    min-width: 285px;
+
+    ion-card-content {
+        width: 100%;
+        padding-right: 0;
+
+        ion-grid {
+            ion-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                
+                ion-col {
+                    padding: 0;
+                    margin: 0;
+    
+                    ion-text {
+                        text-transform: uppercase;
+                    }
+    
+                    .primary {
+                        color: var(--ion-color-primary)
+                    }
+    
+                    .success {
+                        color: var(--ion-color-success-shade)
+                    }
+    
+                    .warning {
+                        color: var(--ion-color-warning-shade)
+                    }
+    
+                    .danger {
+                        color: var(--ion-color-danger)
+                    }
+                }
+
+                .icon {
+                    display: flex;
+
+                    ion-icon {
+                        font-size: 64px;
+                        padding-left: 20px;
+                    }
+                }
+
+                ion-col:first-child {
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                    }
+    
+                    ion-text {
+                        font-weight: bold;
+                        font-size: 22px;
+                    }
+    
+                    ion-text:first-child {
+                        font-weight: 600;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

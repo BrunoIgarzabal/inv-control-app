@@ -49,7 +49,7 @@ export class LoginPage implements OnInit {
           loader.dismiss();
           this.router.navigate([''])
         }, async err => {
-            const toast = await this.toastUi(err.error.message);
+            const toast = await this.toastUi(err.error.message ?? 'Tente novamente mais tarde');
             console.error(err);
 
             this.loginForm.reset();

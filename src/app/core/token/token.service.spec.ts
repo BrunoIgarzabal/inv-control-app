@@ -47,6 +47,7 @@ describe(TokenService.name, () => {
   it(`#${TokenService.prototype.hasToken.name} should return true when called with token`, () => {
     service.setToken(token);
     expect(service.hasToken()).toBeTrue();
+    expect(service.getToken()).toBe(token);
   })
 
   it(`#${TokenService.prototype.hasToken.name} should return false when called without token`, () => {
@@ -55,9 +56,14 @@ describe(TokenService.name, () => {
 
   it(`#${TokenService.prototype.removeToken.name} should remove token in local storage when called`, () => {
     service.setToken(token);
-    expect(service.hasToken()).toBeTrue();
     service.removeToken()
     expect(service.hasToken()).toBeFalse();
+    expect(service.getToken()).toBeFalsy();
+  })
+
+  it(`#${TokenService.prototype.isTokenExpired.name} should return true when called with expired token`, () => {
+    service.setToken(token);
+    expect(service.isTokenExpired(service.getToken())).toBeTrue();
   })
 
 });
