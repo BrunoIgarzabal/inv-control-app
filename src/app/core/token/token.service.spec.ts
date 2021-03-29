@@ -2,6 +2,8 @@ import { TestBed } from '@angular/core/testing';
 
 import { TokenService } from './token.service';
 
+const token = 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTY5NzkzNDIsInN1YiI6ImJydW5vaWdhckBsaXZlLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn1dfQ.wwGk6_4wA--kS4mAo_pHS4xtSWCpgNdSB_-A_TZgpaY';
+
 describe(TokenService.name, () => {
   let service: TokenService;
 
@@ -38,12 +40,12 @@ describe(TokenService.name, () => {
   });
 
   it(`#${TokenService.prototype.setToken.name} should insert token in local storage when called`, () => {
-    service.setToken('someToken');
-    expect(service.getToken()).toBe('someToken');
+    service.setToken(token);
+    expect(service.getToken()).toBe(token);
   })
 
   it(`#${TokenService.prototype.hasToken.name} should return true when called with token`, () => {
-    service.setToken('someToken');
+    service.setToken(token);
     expect(service.hasToken()).toBeTrue();
   })
 
@@ -52,7 +54,7 @@ describe(TokenService.name, () => {
   })
 
   it(`#${TokenService.prototype.removeToken.name} should remove token in local storage when called`, () => {
-    service.setToken('someToken');
+    service.setToken(token);
     expect(service.hasToken()).toBeTrue();
     service.removeToken()
     expect(service.hasToken()).toBeFalse();
