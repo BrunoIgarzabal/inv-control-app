@@ -14,7 +14,13 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, CoreModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    HttpClientModule, 
+    CoreModule,
+  ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     StatusBar, 
