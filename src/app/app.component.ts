@@ -14,7 +14,7 @@ export class AppComponent {
     { title: 'Vendas', url: '/clients', icon: 'cart' },
     { title: 'Ordem de serviços', url: '/providers', icon: 'build' },
 
-    { title: 'Marcas', url: '/clients', icon: 'bookmarks' },
+    { title: 'Marcas', url: '/brands', icon: 'bookmarks' },
     { title: 'Produtos', url: '/providers', icon: 'cube' },
     { title: 'Categorias', url: '/providers', icon: 'grid' },
 
