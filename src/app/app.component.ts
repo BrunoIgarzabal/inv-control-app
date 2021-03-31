@@ -24,8 +24,13 @@ export class AppComponent {
     { title: 'Relatórios', url: '/reports', icon: 'cellular' },
   ];
 
+  public othersPage = [
+    { title: 'Usuários', url: '/users', icon: 'people' },
+    { title: 'Configurações', url: '/settings', icon: 'construct' },
+  ]
+
   constructor(private statusBar: StatusBar) {
-    this.statusBar.overlaysWebView(true);
+    this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString('#4C71DE');
   }
 }
