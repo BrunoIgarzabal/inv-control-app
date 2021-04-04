@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController, MenuController, ToastController } from '@ionic/angular';
 
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { UserLogin } from 'src/app/core/user/user-auth';
@@ -21,7 +21,16 @@ export class LoginPage implements OnInit {
     public loadingController: LoadingController,
     private toastController: ToastController,
     private router: Router,
+    private menu: MenuController
   ) { }
+
+  ionViewWillEnter() {
+    this.menu.enable(false);
+  }
+
+  ionViewDidLeave() {
+    this.menu.enable(true);
+  }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({

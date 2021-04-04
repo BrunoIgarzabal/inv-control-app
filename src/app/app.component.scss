@@ -14,7 +14,12 @@ ion-menu.md ion-list {
 }
 
 ion-menu.md ion-note {
-    margin-bottom: 30px;
+    margin-bottom: 0;
+}
+
+ion-button {
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 ion-menu.md ion-list-header,
@@ -75,7 +80,7 @@ ion-menu.ios ion-list {
 
 ion-menu.ios ion-note {
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 ion-menu.ios ion-item {
